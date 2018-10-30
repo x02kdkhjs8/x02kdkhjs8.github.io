@@ -1,51 +1,63 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Audio samples from "Tacotron: Towards End-to-End Speech Synthesis"</title>
+    <title>Audio samples from "Learning pronunciation from a foreign language in speech synthesis networks"</title>
     <link rel="stylesheet" type="text/css" href="../../stylesheet.css"/>
     <link rel="shortcut icon" href="../../images/taco.png">
   </head>
   <body>
     <article>
       <header>
-        <h1>Audio samples from "Tacotron: Towards End-to-End Speech Synthesis"</h1>
+        <h1>Audio samples from "Learning pronunciation from a foreign language in speech synthesis networks"</h1>
       </header>
     </article>
 
-    <div><b>Paper:</b> <a href="https://arxiv.org/abs/1703.10135">arXiv</a> <a href="http://www.interspeech2017.org/program/technical-program/">Interspeech 2017</a></div>
-    <div><b>Authors:</b> Yuxuan Wang, RJ Skerry-Ryan, Daisy Stanton, Yonghui Wu, Ron J. Weiss, Navdeep Jaitly, Zongheng Yang, Ying Xiao, Zhifeng Chen, Samy Bengio, Quoc Le, Yannis Agiomyrgiannakis, Rob Clark, Rif A. Saurous</div>
-    <div><b>Abstract:</b> A text-to-speech synthesis system typically consists
-      of multiple stages, such as a text analysis frontend, an acoustic model
-      and an audio synthesis module. Building these components often requires
-      extensive domain expertise and may contain brittle design choices. In this
-      paper, we present Tacotron, an end-to-end generative text-to-speech model
-      that synthesizes speech directly from characters. Given &lt;text,
-      audio&gt; pairs, the model can be trained completely from scratch with
-      random initialization. We present several key techniques to make the
-      sequence-to-sequence framework perform well for this challenging
-      task. Tacotron achieves a 3.82 subjective 5-scale mean opinion score on US
-      English, outperforming a production parametric system in terms of
-      naturalness. In addition, since Tacotron generates speech at the frame
-      level, it's substantially faster than sample-level autoregressive
-      methods.</div>
+<!--     <div><b>Paper:</b> <a href="https://arxiv.org/abs/1703.10135">arXiv</a> <a href="http://www.interspeech2017.org/program/technical-program/">Interspeech 2017</a></div>
+    <div><b>Authors:</b> Yuxuan Wang, RJ Skerry-Ryan, Daisy Stanton, Yonghui Wu, Ron J. Weiss, Navdeep Jaitly, Zongheng Yang, Ying Xiao, Zhifeng Chen, Samy Bengio, Quoc Le, Yannis Agiomyrgiannakis, Rob Clark, Rif A. Saurous</div> -->
+    <div><b>Abstract:</b> Although there are more than 65,000 languages in the world, the pronunciations of many phonemes sound similar across the languages. When people learn a foreign language, their pronunciation often reflect their native language's characteristics. That motivates us to investigate how the speech synthesis network learns the pronunciation when multi-lingual dataset is given. In this study, we train the speech synthesis network bilingually in English and Korean, and analyze how the network learns the relations of phoneme pronunciation between the languages. Our experimental result shows that the learned phoneme embedding vectors are located closer if their pronunciations are similar across the languages. Based on the result, we also show that it is possible to train networks that synthesize English speaker's Korean speech and vice versa. In another experiment, we train the network with limited amount of English dataset and large Korean dataset, and analyze the required amount of dataset to train a resource-poor language with the help of resource-rich languages.</div>
 
-    <div><br/>All of the below phrases are unseen by Tacotron during training. <a href="../../index.html">Click here for more from the Tacotron team.</a></div>
+<!--     <div><br/>All of the below phrases are unseen by Tacotron during training. <a href="../../index.html">Click here for more from the Tacotron team.</a></div> -->
 
     <div>
-      <h3>Tacotron works well on out-of-domain and complex words.</h3>
+      <h2>1. Samples from the cross-lingual TTS model</h2>
+      <h3>1-1. English sentence</h3>
       <table>
-        <tr><td class="transcript">“Generative adversarial network or variational auto-encoder.”</td></tr>
-        <tr><td><audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td class="transcript">“Now these things had been struck dead within him.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
       </table>
+      <table>
+        <tr><td class="transcript">“He confessed that the sketch had startled him.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+      </table>
+      <table>
+        <tr><td class="transcript">“He began to follow the footprints of the dog.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+      </table>
+      <table>
+        <tr><td class="transcript">“I suppose you wonder why she is coming up here.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+      </table>
+      <table>
+        <tr><td class="transcript">“They saw each other for the first time in Boston.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+      </table>
+      <table>
+        <tr><td class="transcript">“Its diameter was not more than two hundred yards.”</td></tr>
+        <tr><td>English speaker:<audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+        <tr><td>Korean speaker: <audio controls><source src="demos/gan_or_vae_r2.wav"></audio></td></tr>
+      </table>
+      
+      <h3>1-2. Korean sentence</h3>
 
-      <table>
-        <tr><td class="transcript">“Basilar membrane and otolaryngology are not auto-correlations.”</td></tr>
-        <tr><td><audio controls><source src="demos/basilar.wav"></audio></td></tr>
-      </table>
     </div>
 
     <div>
-      <h3>Tacotron learns pronunciations based on phrase semantics.</h3>
+      <h2>2. Data requirements for foreign language</h2>
       <div>(Note how Tacotron pronounces "read" in the two phrases.)</div>
       <table>
         <tr><td class="transcript">“He has read the whole thing.”</td></tr>
@@ -56,7 +68,7 @@
     </div>
 
     <div>
-      <h3>Tacotron is somewhat robust to spelling errors.</h3>
+      <h2>3. Conversion of each English phoneme to the nearest Korean phoneme</h2>
       <table>
         <tr><td class="transcript">“Thisss isrealy awhsome.”</td></tr>
         <tr><td><audio controls><source src="demos/awhsome.wav"></audio></td></tr>
